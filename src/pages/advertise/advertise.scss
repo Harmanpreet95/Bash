@@ -1,0 +1,243 @@
+page-advertise {
+
+.head .toolbar-background-md {
+    background: transparent;
+    border-color: transparent;
+}
+
+.head .toolbar-background-ios {
+    background: transparent;
+    border-color: transparent;
+}
+
+.head .toolbar-title-md {
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.head .toolbar-title.toolbar-title-ios {
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+.col .card-md,.col .card-ios{
+    margin: 0;
+    width:100% !important;
+}
+
+.position11 .item-icon {
+    top:0px !important;
+}
+.list-ios,.list-md{
+    margin-bottom: 0;
+}
+.item-block{
+    min-height: 3.4rem;
+}
+.item-ios [item-left], .item-ios [item-start],
+.item-md [item-left], .item-md [item-start] {
+    margin: 0 !important;
+    line-height: 25px;
+}
+
+
+
+.back-button-icon.icon.icon-md.back-button-icon-md.ion-md-arrow-back {
+    color: #fff;
+}
+
+.back-button-icon.icon.icon-ios.back-button-icon-ios.ion-ios-arrow-back{color:#fff;}
+
+.back-button-text.back-button-text-ios{color:#fff;}
+
+
+ion-slides {
+    height: 30%;
+}
+
+.swiper-pagination-bullet {
+    background: #ff42d5;
+    opacity: 0.5;
+
+}
+
+.swiper-pagination-bullet-active {
+    background: #ff42d5;
+    opacity: 1;
+}
+
+.item-md p, .item-ios p{
+    color: #9a9a9a;
+    font-size: 14px;
+    white-space: normal;
+    margin-bottom: 10px;
+}
+
+.item-md h2, .item-ios h2{
+    font-size: 20px;
+    white-space: normal;
+    color:#000;
+}
+
+.item-md ion-icon[item-left] + .item-inner, .item-md ion-icon[item-left] + .item-input, .item-md ion-icon[item-start] + .item-inner, .item-md ion-icon[item-start] + .item-input {
+    margin-left: 0;
+}
+
+
+.list-md .item-block .item-inner, .list-ios .item-block .item-inner, .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+    border-bottom: 0 solid #dedede;
+}
+
+.icon {
+    color: #ff42d5;
+       font-size: 20px;
+}
+
+.item-ios [item-left], .item-ios [item-start] {
+    margin: 8px 8px 8px 0;
+}
+
+.label-md, .label-ios{
+    margin: 0 8px 0 0;
+}
+
+.icon.icon-md.ion-md-document.item-icon{position:relative;top:-51px;}
+
+.icon.icon-ios.ion-ios-document.item-icon{position:relative;top: -43px;}
+
+.prz {
+    background: #ff42d5;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 4px;
+    padding: 7px;
+}
+
+
+.automob {
+    color: #9a9a9a;
+    padding-left: 5px;
+    font-size: 14px;
+}
+.swiper-slide img{
+    width:100%;
+}
+
+.icon.icon-md.ion-md-git-branch,.icon.icon-ios.ion-ios-git-branch{
+    margin: -2px 0 18px;
+}
+
+
+.main_prcs li {
+    display: inline-block;
+    float: left;
+    text-align: center;
+    width: 33%;
+    position:relative;
+   
+}
+.main_prcs {
+    float: left;
+    padding-left: 0;
+    width: 100%;
+}
+.proces  {
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    margin: 0 auto;
+    padding: 9px 6px;
+    width: 50%;
+    display: block;
+
+}
+
+.proces .icon {
+    font-size: 30px;
+}
+
+
+.proces::after {
+    border-top: 1px dotted #ccc;
+    content: "";
+    float: left;
+    height: 1px;
+    position: absolute;
+    right: -24px;
+    top: 26px;
+    width: 50px;
+}
+
+ul li:nth-child(3) .proces::after{display: none;}
+
+.locat{ position:relative; display: block;}
+
+
+.views {
+    background: #ff42d5;
+    border: 1px solid #ff42d5;
+    border-radius: 50px;
+    color: #fff;
+    float: right;
+    margin: 20px 11px 0 0;
+    padding: 1px 7px;
+}
+
+.views > span .icon{
+    margin-right:4px;
+}
+.views > span {
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+.views .icon.icon-md.ion-md-eye,.views .icon.icon-ios.ion-ios-eye {
+    border-right: 1px solid #fff;
+    color: #fff;
+    font-size: 12px;
+    padding-right: 4px;
+}
+.account11{
+    position: relative;
+}
+.account11 span {
+    position: absolute;
+    width: 20%;
+    left: 20px;
+    bottom: 20px;
+    border-radius: 25px;
+    background: #fff;
+    color: #ff42d5;
+    font-size: 13px;
+    padding: 0px 14px;
+    line-height: 25px;
+    z-index: 999;
+}
+.account11 span .icon{
+    margin-top: 0;
+    position: relative;
+    left: -1;
+    top: 2px;
+    color: #9a9a9a;
+    width: auto;
+    float: left;
+}
+
+p.acnt_2 {
+    margin: 0;
+    width: 20%;
+    float: left;
+    padding-left:10px;
+}
+.grey_rght{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: -36px;
+    top: 23px;
+    margin: 0 auto;
+    color: #fff;
+
+}
+}

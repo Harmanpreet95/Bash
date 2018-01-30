@@ -1,0 +1,43 @@
+
+<ion-header class="head" style="background: url(assets/images/gradient.png) no-repeat center fixed; 
+  background-size: cover;">
+  <ion-toolbar>
+    <ion-title>
+     VIEW BY FILTERS
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="md-close" showWhen="android,windows,ios" class="close"></ion-icon>
+      </button>
+
+      <!--<button ion-button>
+        <ion-icon name="refresh-circle" showWhen="android,windows,ios" class="refresh"></ion-icon>
+      </button>-->
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding style="background:#fff;">
+
+  <div class="box11" >
+        <ion-grid>
+          <ion-row>
+            <ion-col col-6 *ngFor = "let view of viewsFilter">
+              <div class="part">
+                <div class="hexa">
+                  <div class="hex1">
+                    <div class="hex2">
+                      <img [src] = "view.image" (click) = "detailshow(view.id)" alt="" width="320" height="313" />
+                      <!--<span>{{paidlist.title}}</span>-->
+                     <span>{{view.title}}</span>
+                    </div>
+                  </div>
+                </div>
+                <span class="amount">${{view.price}}</span>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+  </div>
+</ion-content>

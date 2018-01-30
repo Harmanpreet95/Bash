@@ -1,0 +1,215 @@
+
+<ion-content padding style="background: url(assets/images/bgb.png) no-repeat center fixed; 
+  background-size: cover;">
+
+  <div class="" style="float: left;padding: 0 15px;text-align: center;width: 100%;">
+   <div class="logo_edt" text-center><img src="assets/images/logob.png"></div>
+   <span class="wlcm">CREATE YOUR ACCOUNT</span>
+
+<ion-list>
+<form (ngSubmit)="onSubmit()" #heroForm="ngForm" novalidate>
+  <!-- <ion-item class="login">
+    <ion-icon name="contact" item-start class="icn"></ion-icon>
+
+    <ion-input type="text" placeholder="First Name"  pattern="[a-zA-Z ]+" [(ngModel)]="data.fname" name="fname" type="text"  id="fname" #fname="ngModel"></ion-input>
+    <ion-icon name="checkmark-circle-outline" item-end></ion-icon>
+  </ion-item> -->
+  <!-- <ion-label  class="alert alert-danger" color="danger">
+    <div *ngIf="fname.errors && (fname.dirty || fname.touched)">
+       
+         <div [hidden]="!fname.errors.pattern">
+            Only alphabets are allowed
+            </div>
+    </div>
+    </ion-label> -->
+
+  <!-- <ion-item class="login">
+    <ion-icon name="contact" item-start class="icn"></ion-icon>
+
+    <ion-input type="text" placeholder="Last Name" [(ngModel)]="data.lname" pattern="[a-zA-Z ]+" name="lname" type="text"  id="lname" #lname="ngModel"></ion-input>
+    <ion-icon name="checkmark-circle-outline" item-end></ion-icon>
+  </ion-item> -->
+  <!-- <ion-label  class="alert alert-danger" color="danger">
+    <div *ngIf="lname.errors && (lname.dirty || lname.touched)">
+  
+        <div [hidden]="!lname.errors.pattern">
+          Only alphabets are allowed
+          </div>
+    </div>
+  </ion-label> -->
+
+<!-- <div class="spacer"></div> -->
+
+<ion-item class="login">
+    <ion-icon name="contact" item-start class="icn"></ion-icon>
+
+    <ion-input type="text" placeholder="User Name" [(ngModel)]="data.uname" pattern="^[a-zA-Z0-9]*$" name="uname" type="text"  id="uname" #uname="ngModel" required></ion-input>
+    <ion-icon name="checkmark-circle-outline" item-end></ion-icon>
+  </ion-item>
+  <ion-label  class="alert alert-danger" color="danger">
+    <div *ngIf="uname.errors && (uname.dirty || uname.touched)">
+        <div [hidden]="!uname.errors.required" >
+           Field is required
+        </div>
+         <div [hidden]="!uname.errors.pattern">
+          Space not allowed
+          </div>
+    </div>
+  </ion-label>
+
+
+
+  <ion-item class="login">
+    <ion-icon name="key" item-start class="icn"></ion-icon>
+
+    <ion-input type="password" placeholder="Password" [(ngModel)]="data.password" name="password" type="password"  id="password" minlength="6" required   #password="ngModel"></ion-input>
+    <ion-icon name="checkmark-circle-outline" item-end></ion-icon>
+  </ion-item>
+  <ion-label class="alert alert-danger" color="danger">
+    <div *ngIf="password.errors && (password.dirty || password.touched)">
+      <div [hidden]="!password.errors.required" >
+        Password is required
+        </div>
+    </div>
+<div *ngIf="password.errors && (password.dirty || password.touched)" >
+   <div [hidden]="!password.errors.minlength" >
+     Password Minlength 6 Character 
+    </div>
+</div>
+</ion-label>
+
+
+
+  <ion-item class="login">
+    <ion-icon name="key" item-start class="icn"></ion-icon>
+
+    <ion-input type="password" placeholder="Confirm Password"  [(ngModel)]="data.cpassword" name="cpassword" type="password"  id="cpassword" minlength="6" required   #cpassword="ngModel"></ion-input>
+    <ion-icon name="checkmark-circle-outline" item-end></ion-icon>
+  </ion-item>
+  <ion-label class="alert alert-danger" color="danger">
+    <div *ngIf="cpassword.errors && (cpassword.dirty || cpassword.touched)" >
+       <div [hidden]="!cpassword.errors.required" >
+         Field is required
+        </div>
+    </div>
+    <div *ngIf="cpassword.errors && (cpassword.dirty || cpassword.touched)" >
+       <div [hidden]="!cpassword.errors.minlength" >
+        Password Minlength 6 Character 
+        </div>
+    </div>
+</ion-label>
+
+<!-- <div class="spacer"></div> -->
+  <!-- <ion-item class="login">
+    <ion-icon name="flag" item-start class="icn"></ion-icon>
+    <!-- <ion-label>Gender</ion-label> -->
+    <!-- <ion-select type="text" placeholder="Country"  [(ngModel)]="data.country" pattern="[a-zA-Z ]+" name="country" type="text"  id="country"  #country="ngModel">
+
+      <ion-option *ngFor="let list of listcountry">{{list.country_name}}</ion-option>
+     
+    </ion-select>
+    <ion-icon name="checkmark-circle-outline" item-end></ion-icon>
+  </ion-item> --> -->
+  <!-- <ion-label  class="alert alert-danger" color="danger">
+    <div *ngIf="country.errors && (country.dirty || country.touched)">
+     
+         <div [hidden]="!country.errors.pattern">
+          Only alphabets are allowed
+          </div>
+    </div>
+  </ion-label> -->
+
+
+
+   <ion-item class="login">
+    <ion-icon name="mail" item-start class="icn"></ion-icon>
+
+    <ion-input type="email" placeholder="Email" [(ngModel)]="data.email" (ionChange)="emailfn(data.email)" name="email" type="email"  id="email" required   #email="ngModel" ></ion-input> 
+    <!-- <ion-input type="email" placeholder="Email"  (change)="runTimeChange($event)" type="email"  id="email" required   ></ion-input> -->
+    <ion-icon name="checkmark-circle-outline" item-end></ion-icon>
+  </ion-item>
+   <ion-label class="alert alert-danger" color="danger">
+    <div *ngIf="email.errors && (email.dirty || email.touched)" >
+      <div [hidden]="!email.errors.required" >
+        Field is required
+       </div>
+       <div [hidden]="!email.errors.pattern" >
+        In-valid Email
+       </div>
+    </div>
+    </ion-label> 
+<!-- 
+   <ion-item class="login">
+    <ion-icon name="call" item-start class="icn"></ion-icon>
+ 
+    <ion-input type="number" placeholder="Phone" [(ngModel)]="data.phone" name="phone"  #phone="ngModel"></ion-input>
+    <ion-icon name="checkmark-circle-outline" item-end></ion-icon>
+  </ion-item> -->
+  <!-- <ion-label class="alert alert-danger" color="danger">
+    <div *ngIf="phone.errors && (phone.dirty || phone.touched)">
+    
+     <div [hidden]="!phone.errors.valid" class="alert alert-danger">
+        Invalid Format
+     </div>
+
+   </div>
+ </ion-label> -->
+<!--/////////////////////////////////-->
+
+   <!--<ion-item class="login">
+   <ion-icon name="globe" item-start class="icn"></ion-icon>
+   <ion-label class="alert alert-danger" color="danger">
+      <div *ngIf="lat.errors && (lat.dirty || lat.touched)">
+        <div [hidden]="!lat.errors.required">
+            Latitude is required
+       </div>
+     </div>
+   </ion-label>
+    <ion-input type="number" placeholder="latitude" [(ngModel)]="data.lat" name="lat" required #lat="ngModel"></ion-input>
+    <ion-icon name="checkmark-circle-outline" item-end></ion-icon>
+  </ion-item>-->
+
+<!--
+
+   <ion-item class="login">
+   <ion-icon name="globe" item-start class="icn"></ion-icon>
+   <ion-label class="alert alert-danger" color="danger">
+      <div *ngIf="long.errors && (long.dirty || long.touched)">
+        <div [hidden]="!long.errors.required">
+            Longitude is required
+       </div>
+     </div>
+   </ion-label>
+    <ion-input type="number" placeholder="Longitude" [(ngModel)]="data.long" name="long" required #long="ngModel"></ion-input>
+    <ion-icon name="checkmark-circle-outline" item-end></ion-icon>
+  </ion-item>-->
+
+<!--
+     <ion-item class="login">
+  <ion-icon name="navigate" item-start class="icn"></ion-icon>
+   <ion-label class="alert alert-danger" color="danger">
+      <div *ngIf="address.errors && (address.dirty || address.touched)">
+        <div [hidden]="!address.errors.required">
+            Address is required
+       </div>
+     </div>
+   </ion-label>
+    <ion-input type="text" placeholder="Address" [(ngModel)]="data.address" name="address" required #address="ngModel"></ion-input>
+    <ion-icon name="checkmark-circle-outline" item-end></ion-icon>
+  </ion-item>-->
+<!--///////////////////////////////////////////-->
+
+
+<button ion-button color="light" round [disabled]="!heroForm.form.valid" (click)="register(heroForm)" class="sgn_stt">SIGN UP NOW</button>
+<span class="pink">GLAD TO HAVE YOU!</span>
+
+<p style="text-align:center; font-size:13px;color:#fff;">Already have an account ? <a style="color:#52bed9;" (click)="signin()"> Sign In</a></p>
+</form>
+
+</ion-list>
+
+<!--<button ion-button color="light" round  (click)="sgnupPage();">SIGN UP NOW</button>-->
+
+
+  </div>
+</ion-content>

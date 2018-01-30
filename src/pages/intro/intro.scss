@@ -1,0 +1,31 @@
+page-intro {
+    .logo {
+    width: 100%;
+    padding: 47vh 0;
+    }
+
+    .int_edt{width:100%;height:100%;}
+
+    .toolbar-background-md {
+    background: transparent;
+}
+
+.button-inner {
+    color: #fff;
+}
+
+
+.footer-md::before{
+    height: 0;
+}
+
+.toolbar-background-ios {
+    background:transparent;
+}
+
+.footer-ios .toolbar-background-ios {
+    border-style: solid;
+    border:0px;
+}
+
+}

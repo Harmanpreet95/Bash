@@ -1,0 +1,63 @@
+
+<ion-header class="head" style="background: url(assets/images/gradient.png) no-repeat center fixed; 
+  background-size: cover;">
+  <ion-navbar>
+    <ion-title>{{this.title_post}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color:#fff;">
+
+<ion-list>
+  <div *ngFor = "let chat of chatall">
+  <ion-item *ngIf = "chat.from != this.User_id">
+    <ion-avatar item-start>
+      <img [src]="this.url+chat.senderprofile">
+    </ion-avatar>
+    <h2>{{chat.sendername}}</h2>
+  
+      <p *ngIf = "chat.file == 0">{{chat.message}}</p>
+     <p *ngIf = "chat.file == 1"><img [src]="this.url+chat.message"></p>
+  </ion-item>
+  </div>
+
+<div *ngFor = "let chat of chatall">
+    <ion-item *ngIf = "chat.from == this.User_id">
+       <p class="pnk" *ngIf = "chat.file == 0">{{chat.message}}</p>
+        <p class="pnk" *ngIf = "chat.file == 1"><img [src]="this.url+chat.message"></p>
+    </ion-item>
+</div>
+
+<!--<ion-item>
+    <ion-avatar item-start>
+      <img src="assets/images/avatar-cher.png">
+    </ion-avatar>
+    <h2>Cher</h2>
+    <p>Ugh. As if.</p>
+  </ion-item>
+
+  <ion-item>
+    <p class="pnk">Ugh. As if.</p>
+</ion-item>-->
+
+</ion-list>
+
+</ion-content>
+
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-input type="text" placeholder="Your Text Here" [(ngModel)] = "message"></ion-input>
+    <ion-buttons end>
+      <button ion-button icon-right color="royal" (click) = "openActionSheet()">
+        <ion-icon name="attach"></ion-icon>
+      </button>
+      <!--<button ion-button icon-right color="royal">
+        <ion-icon name="happy"></ion-icon>
+      </button>-->
+      <button ion-button icon-right color="royal" (click)="sendMessage(message)">
+        <ion-icon name="send"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

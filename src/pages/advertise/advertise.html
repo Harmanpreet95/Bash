@@ -1,0 +1,97 @@
+
+<ion-header class="head" style="background: url(assets/images/gradient.png) no-repeat center fixed; 
+  background-size: cover;">
+  <ion-navbar>
+    <ion-title>VIEW ADVERTISEMENT</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color:#fff;" >
+
+  <!--<div class="car">
+    <img src="assets/images/car.png" />
+  </div>-->
+
+<!--<ion-slides pager disable-side-menu-drag=""  slider="slider1" delegate-handle="slider1" id="preferance-slider1" style="width:100%;height:250px;">
+
+  <ion-slide *ngFor = "let slidecategory of this.images"  id="preferance-slide25">
+    <img [src]="slidecategory"/>
+  </ion-slide>
+
+    </ion-slides>-->
+
+
+
+<ion-slides pager="true" disable-side-menu-drag="" loop="true" autoplay="true">
+
+  <ion-slide *ngFor = "let slidecategory of this.images"  id="preferance-slide25">
+    <img (click)="fullview(slidecategory.image)" [src]="slidecategory.image"/>
+  
+  </ion-slide>
+ 
+  
+</ion-slides>
+<div class="account11"> 
+    <span> <ion-icon name="mail"></ion-icon><p class="acnt_2">{{data.gallery_count}}</p></span>
+</div>
+
+<ion-list>
+
+<div class="views">
+  <span><ion-icon name="eye">{{data.count_view}} views</ion-icon></span>
+  <span>Posted:{{data.activation_date}}</span>
+</div>
+
+  <ion-item>
+    <ion-icon style="margin-top: 17px;" name="logo-dropbox" item-start></ion-icon>
+    <h2> {{data.title}}</h2>
+  </ion-item>
+  <ion-item class="position11">
+    <ion-icon name="document" item-start></ion-icon>
+    <p style="margin-bottom:0px;">{{data.description}}</p>
+  </ion-item>
+</ion-list>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-7> 
+      <ion-icon name="git-branch" item-start style="padding-left: 12px;"><span class="automob">{{data.cattitle}}</span></ion-icon>  
+      <ion-icon name="logo-usd" item-start style="padding-left: 12px;"><span class="prz">{{data.price}}</span></ion-icon> 
+    </ion-col>
+    <ion-col col-5>
+      <ion-card class="adv-map card card-ios">
+        <a class="locat"  (click)="mpPage(data.address);">
+          <img src="assets/images/advance-card-map-paris.png">
+          <ion-fab right="" top="">
+            <button color="secondary" ion-fab="" class="fab fab-ios fab-ios-secondary"><ion-icon class="fab-close-icon icon icon-ios ion-ios-close" name="close" role="img" aria-label="close"></ion-icon><span class="button-inner">
+              <ion-icon name="pin" role="img" class="icon icon-ios ion-ios-pin" aria-label="pin"></ion-icon>
+            </span><div class="button-effect"></div></button>
+          </ion-fab>
+         
+        </a>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+<div class="padding">
+
+<ul class="main_prcs">
+  <li><a   (click)="chtPage(data.created_by,data.title,data.post_id);" class="proces"><ion-icon name="chatbubbles"></ion-icon></a>Chat</li>
+  <li><a  (click)="presentModal(data.post_id,data.price,data.created_by)"  class="proces prcs_rel"><ion-icon name="pricetags"></ion-icon>
+  
+ 
+<!--<ion-icon name="checkmark-circle" class="tick" *ngIf = "this.coloroffer != 0" style="color : green;"></ion-icon>-->
+</a>
+  Offer Your Price</li>
+  <li><a  (click)="showAlert(data.created_by,data.post_id)" class="proces" >
+      <ion-icon  *ngIf = "this.favo_var == 0" name="star"></ion-icon>
+       <ion-icon  *ngIf = "this.favo_var == 1" style = "color : red;" name="star"></ion-icon>
+    </a>Favorite</li>
+</ul>
+
+</div>
+
+</ion-content>
+

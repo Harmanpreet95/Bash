@@ -1,0 +1,87 @@
+
+<ion-header class="head" style="background: url(assets/images/gradient.png) no-repeat center fixed; 
+  background-size: cover;">
+  <ion-navbar>
+    <ion-title>ADVERTISE POSTED</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color:#fff;">
+
+  <!--<div class="car">
+    <img src="assets/images/car.png" />
+  </div>-->
+
+<ion-slides pager>
+
+  <ion-slide>
+    <img src="assets/images/car.png" />
+  </ion-slide>
+
+  <ion-slide>
+    <img src="assets/images/car.png" />
+  </ion-slide>
+
+  <ion-slide>
+    <img src="assets/images/car.png" />
+  </ion-slide>
+
+</ion-slides>
+
+
+<ion-list>
+
+<div class="views">
+  <span><ion-icon name="eye">324 views</ion-icon></span>
+  <span>Posted:2 Days Ago</span>
+</div>
+
+  <ion-item>
+    <ion-icon style="margin-top: 17px;" name="logo-dropbox" item-start></ion-icon>
+    <h2>Elite I20 2015 Petrol Version For sale</h2>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="document" item-start></ion-icon>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+
+    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+  when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+
+    <p>Lorem Ipsum has been the industry's standard..</p>
+  </ion-item>
+</ion-list>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-6> 
+      <ion-icon name="git-branch" item-start style="padding-left: 12px;"><span class="automob">Cars</span></ion-icon>  
+      <ion-icon name="logo-usd" item-start style="padding-left: 12px;"><span class="prz">$5500</span></ion-icon> 
+    </ion-col>
+    <ion-col col-6>
+      <ion-card class="adv-map card card-ios">
+        <a class="locat"  (click)="mpPage();">
+          <img src="assets/images/advance-card-map-paris.png">
+          <ion-fab right="" top="">
+            <button color="secondary" ion-fab="" class="fab fab-ios fab-ios-secondary"><ion-icon class="fab-close-icon icon icon-ios ion-ios-close" name="close" role="img" aria-label="close"></ion-icon><span class="button-inner">
+              <ion-icon name="pin" role="img" class="icon icon-ios ion-ios-pin" aria-label="pin"></ion-icon>
+            </span><div class="button-effect"></div></button>
+          </ion-fab>
+        </a>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+<div class="padding">
+
+<ul class="main_prcs">
+  <li><a  (click)="useraccountPage();" class="proces"><ion-icon name="contact"></ion-icon></a>Profile</li>
+  <li><a   (click)="edtPage();" class="proces"><ion-icon name="create"></ion-icon></a>Edit</li>
+  <li><a  (click)="showConfirm()" class="proces" ><ion-icon name="trash"></ion-icon></a>Delete</li>
+</ul>
+
+</div>
+
+</ion-content>
+

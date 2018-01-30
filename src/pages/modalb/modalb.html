@@ -1,0 +1,35 @@
+
+<div padding text-center class="mod">
+
+<ion-buttons end>
+      <button ion-button (click)="dismiss()" class="cross">
+        <ion-icon name="md-close" showWhen="android,windows,ios" class="close"></ion-icon>
+      </button>
+  </ion-buttons>
+
+  <ion-list>
+    <ion-label class="label label-ios">
+      OFFER YOUR PRICE
+    </ion-label>
+    <div class="pop">
+      <h3>Product Price</h3>
+      <ion-icon name="logo-usd" item-start style="color:#ff42d5;"><span class="prz">{{this.Post_price}}</span></ion-icon>
+    </div>
+    <h4 class="chs">BE THE FIRST TO OFFER</h4>
+<!--
+<ion-item>
+  <ion-label class="choose"><ion-icon name="logo-usd"></ion-icon>Choose Your Price</ion-label>
+  <ion-range [(ngModel)]="brightness"></ion-range> 
+</ion-item>-->
+
+<div class="price">
+      <!--<span>$500</span>-->
+      <ion-input type="number" placeholder = "Enter Your Price" [(ngModel)] = "offerprice" ></ion-input>
+</div>
+ <!--<ion-icon class="tick grey_rght" name="checkmark-circle"  (click) = "offer(offerprice)"></ion-icon>-->
+ <ion-icon name="checkmark-circle" class="tick" (click) = "offer(offerprice)" *ngIf = "this.coloroffer == 0"></ion-icon>
+<ion-icon name="checkmark-circle" class="tick" *ngIf = "this.coloroffer != 0" style="color : green;"></ion-icon>
+</ion-list>
+
+
+</div>

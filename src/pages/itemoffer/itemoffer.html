@@ -1,0 +1,109 @@
+
+<ion-header class="head" style="background: url(assets/images/gradient.png) no-repeat center fixed; 
+  background-size: cover;">
+  <ion-navbar>
+    <ion-title>OFFERS</ion-title>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color:#fff;">
+
+    <div class="segmnt">
+        
+        <ion-item>
+          <div class="product">
+            <h2>{{name}}</h2>
+          </div> 
+          
+          <ion-avatar item-start>
+            <img [src]="image">
+          </ion-avatar>
+
+            <div class="posted">
+              <span>${{price}}</span>
+              <h5>posted {{posted}}</h5>
+            </div>
+
+            <a class="icns">
+              <ion-icon name="logo-usd" item-end class="usdicn"></ion-icon>
+              <sup *ngIf = "this.showcount == undefined">0</sup>
+              <sup *ngIf = "this.showcount >= 0">{{this.showcount}}</sup>
+              </a>
+
+            <a (click)="presentModal()" class="products">
+              <span>{{this.package}}</span>
+            </a>
+
+        </ion-item>
+
+    </div>
+
+
+
+  <ion-list>
+
+    <ion-buttons end class="btn">
+          <button ion-button small outline round *ngIf = "this.offer != 0" (click) = "recent('0')">
+            all
+          </button>
+           <button ion-button small outline round *ngIf = "this.offer == 0" style="background-color : #fe42d4;" (click) = "recent('0')">
+            all
+          </button>
+          <button ion-button small outline round *ngIf = "this.offer != 1" (click) = "recent('1')">
+            recent
+          </button>
+            <button ion-button small outline round *ngIf = "this.offer == 1" style="background-color:#fe42d4;" (click) = "recent('1')">
+            recent
+          </button>
+          <button ion-button small outline round *ngIf = "this.offer != 2" (click) = "recent('2')">
+            old
+          </button>
+            <button ion-button small outline round *ngIf = "this.offer == 2" style="background-color:#fe42d4;" (click) = "recent('2')">
+            old
+          </button>
+    </ion-buttons>
+
+    <ion-item *ngFor = "let useroffer of showUsersOffer" >
+          <div class="product">
+            <h2>{{useroffer.user_name}}</h2>
+          </div> 
+          
+          <ion-avatar item-start>
+            <img  *ngIf="useroffer.profile_photo != ''" [src]="useroffer.profile_photo">
+             <!--<img *ngIf="useroffer.profile_photo == ''" src="/assets/images/car.png" alt="" width="320" height="313" />-->
+           
+          </ion-avatar>
+
+            <div class="posted">
+              <span>${{useroffer.offerprice}}</span>
+              <h5>posted {{useroffer.offerdate}}</h5>
+            </div>
+
+            <a class="icns" (click) = "chat(useroffer.user_id,name)"><ion-icon name="chatbubbles" item-end class="bubbleicn"></ion-icon></a>
+            <a class="icns" (click) = "offer_del(useroffer.user_id)"><ion-icon name="trash" item-end class="chaticn"></ion-icon></a>
+
+      </ion-item>
+
+    <!--<ion-item>
+          <div class="product">
+            <h2>LENOVO</h2>
+          </div> 
+          
+          <ion-avatar item-start>
+            <img src="assets/images/lapy.png">
+          </ion-avatar>
+
+            <div class="posted">
+              <span>$5500</span>
+              <h5>posted 2days ago</h5>
+            </div>
+
+            <a class="icns" (click) = "chat()"><ion-icon name="chatbubbles" item-end class="bubbleicn"></ion-icon></a>
+            <a class="icns"><ion-icon name="trash" item-end class="chaticn"></ion-icon></a>
+
+      </ion-item>-->
+  </ion-list>
+
+</ion-content>
+

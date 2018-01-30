@@ -1,0 +1,36 @@
+
+<div padding text-center class="mod">
+
+<ion-buttons end>
+      <button ion-button (click)="dismiss()" class="cross">
+        <ion-icon name="md-close" showWhen="android,windows,ios" class="close"></ion-icon>
+      </button>
+  </ion-buttons>
+
+  <ion-list>
+    <ion-label class="label label-ios">
+      How Great if u Advertise on the app for
+    </ion-label>
+
+
+<div class="price">
+      <span>{{this.advPrice}}</span>
+</div>
+
+</ion-list>
+
+<ion-icon name="checkmark-circle" class="tick"></ion-icon>
+
+<!--<h3 class="chs">Choose Payment Method </h3>-->
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-4>
+      <a (click) = "paypal()"><img src="assets/images/paypal.png" style ="margin-left:80px;"/></a>
+      </ion-col>
+    <!--<ion-col col-4><a><img src="assets/images/skrill.png" /></a></ion-col>
+    <ion-col col-4><a><img src="assets/images/card.png" /></a></ion-col>-->
+  </ion-row>
+</ion-grid>
+
+</div>

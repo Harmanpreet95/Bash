@@ -1,0 +1,124 @@
+
+<ion-header class="head" style="background: url(assets/images/gradient.png) no-repeat center fixed; 
+  background-size: cover;">
+  <ion-navbar>
+    <ion-title>EDIT YOUR ADVERTISEMENT</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color:#fff;">
+   <!--<form #editform="ngForm" (ngSubmit)="onSubmit()" novalidate>-->
+<div class="camera_out">
+  <div class="car">
+  <ion-slides *ngIf = "this.imag != ''" pager="true" disable-side-menu-drag=""  loop="true" autoplay="true">
+  <ion-slide *ngFor = "let slidecategory of this.imag"  id="preferance-slide25">
+    <img (click)="fullview(slidecategory.image)" [src]="slidecategory.image"/>
+     <!--<img *ngIf = "this.imag == ''" [src]="slidecategory.image"/>-->
+     <ion-icon (click) = "imagedel(slidecategory.id)" class="close11" name="close-circle"></ion-icon>
+   
+  </ion-slide>
+   
+</ion-slides>
+
+
+  <ion-slides *ngIf = "this.imag == ''" pager="true" disable-side-menu-drag="">
+  <ion-slide *ngFor = "let slidecategory of this.imag[0]"  id="preferance-slide25">
+    <img *ngIf = "this.imag != ''" [src]="slidecategory.image"/>
+     <!--<img *ngIf = "this.imag == ''" [src]="slidecategory.image"/>-->
+     <ion-icon (click) = "imagedel(slidecategory.id)" class="close11" name="close-circle"></ion-icon>
+   
+  </ion-slide>
+   
+</ion-slides>
+      </div>
+<ion-icon name="camera" class="cam" (click) = "openActionSheet()"></ion-icon>
+
+ </div>
+
+  <!--<div class="car">
+
+    <img src="assets/images/car.png" />
+    <!--<img [src]="srcImage" />-->
+ <!--   <ion-icon name="camera" class="cam" (click) = "openActionSheet()"></ion-icon>
+  </div>-->
+  
+
+<div padding>
+
+
+
+  <ion-item class="selng">
+    <ion-icon name="logo-dropbox" item-start></ion-icon>
+    <ion-input type="text" placeholder="What are you selling ?" maxlength="50" [(ngModel)]="selling" ></ion-input>
+  </ion-item>
+
+  <ion-item class="selng">
+    <ion-icon name="document" item-start></ion-icon>
+    <ion-textarea class="textarea_new" type="text" maxlength="150" placeholder="Describe your Item in brief" [(ngModel)]="brief"></ion-textarea>
+  </ion-item>
+
+
+<!--<ion-item>
+  <ion-label class="choose"><ion-icon name="logo-usd"></ion-icon>Choose Your Price</ion-label>
+  <ion-range [(ngModel)]="brightness"></ion-range> 
+</ion-item>-->
+<div class="price">
+    <ion-item class="selng">
+        <ion-icon name="pricetag" item-start style ="color :#fe42d4;"></ion-icon>
+        <ion-input type="number" placeholder="Enter Your Price" [(ngModel)]="priceadv" ></ion-input>
+      </ion-item>
+  
+  </div>
+
+
+<!-- <div class="price">
+      <span>${{this.price}}</span>
+      <ion-icon *ngIf = "this.color == 0" name="checkmark-circle" (click) = "green()"></ion-icon>
+      <ion-icon *ngIf = "this.color != 0" name="checkmark-circle" (click) = "green()" style = "color:green;"></ion-icon>
+</div> -->
+
+<ion-list class="drp_cnt">
+  <ion-item class="drp" style="border-right: 1px solid #fe42d4;">
+    <ion-label>Select category</ion-label>
+    <ion-select [(ngModel)]="list_one" (ionChange)="val()" placeholder = "Select Category">
+       <!--<ion-option value="ne" selected >Select Category</ion-option>-->
+      <ion-option *ngFor="let categories of categorylist;" value="{{categories.title}}">{{categories.title}}</ion-option>
+    </ion-select>
+  </ion-item>
+
+ 
+</ion-list>
+
+<ion-item class="drp_cnt">
+        <ion-searchbar 
+          [(ngModel)]="this.autocomplete.query" 
+          [showCancelButton]="true" 
+          (ionInput)="updateSearch()" 
+          (ionCancel)="dismiss()"
+          placeholder="Location ..."
+          
+          >
+       </ion-searchbar>
+      <ion-list>
+          <ion-item *ngFor="let item of autocompleteItems" 
+          (click)="chooseItem(item.description)">
+          {{ item.description }}
+          </ion-item>
+      </ion-list>
+</ion-item>
+
+
+</div>
+
+<ion-footer style="position:unset !important">
+  <ion-toolbar>
+    <ion-title><a style="color:#fff;" (click)="showAlert(selling,brief,priceadv)">POST ADVERTISEMENT</a></ion-title>
+  </ion-toolbar>
+</ion-footer>
+
+<!--</form>-->
+</ion-content>
+
+
+
+

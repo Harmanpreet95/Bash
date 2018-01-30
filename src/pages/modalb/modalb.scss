@@ -1,0 +1,140 @@
+page-modalb {
+
+.mod{
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    float: left;
+    margin: 39% 10%;
+    width: 80%;
+    position: relative;
+}
+
+.prz {
+    background: #ff42d5;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 11px;
+    margin-left: 4px;
+    padding: 7px;
+}
+
+
+.chs {
+    color: #ccc;
+    float: left;
+    font-size: 15px;
+    // padding-top: 7px;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+
+.choose {
+    float: left;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+    color: #939393;
+}
+
+.choose .icon.icon-md.ion-logo-usd {
+    color: #fe42d4;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.choose .icon.icon-ios.ion-logo-usd {
+    color: #fe42d4;
+    padding-left: 12px;
+    padding-right: 13px;
+}
+
+.range-md .range-knob-min.range-knob-min .range-knob, .range-ios .range-knob {
+    border: 2px solid #fe42d4;
+    background: #fe42d4;
+}
+
+.range-md .range-bar-active, .range-ios .range-bar-active {
+    background: #fe42d4;
+}
+
+
+.range-md .range-knob {
+    background: #fe42d4;
+}
+
+.pop {
+    background: #f2f2f2 ;
+    float: left;
+    padding: 10px 0px;
+    width: 100%;
+}
+.pop h3 {
+    color: #444;
+    font-size: 17px;
+    font-weight: normal;
+    margin-top: 4px;
+}
+
+
+.cross {
+    background: #fff;
+    border-radius: 50px;
+    color: #000;
+    padding: 0 13px;
+    position: absolute;
+    right: -34px;
+    top: -37px;
+}
+
+.price {
+    float: left;
+    padding: 0;
+    width: 100%;
+}
+.price > span {
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    color: #fe42d4;
+    padding: 8px 18px;
+}
+
+
+.list-md .item-block .item-inner {
+    border-bottom: 0px;
+}
+
+ion-range {
+    height: 32px;
+}
+
+.tick {
+    bottom: 126px;
+    color: #ccc;
+    font-size: 25px;
+    left: 86%;
+    margin: 0 auto;
+    position: absolute;
+   
+   bottom: 13%;
+}
+
+.list-ios .item-block .item-inner {
+    border-bottom: 0px;
+}
+
+.cross.disable-hover.button.button-ios.button-default.button-default-ios{
+padding: 0 17px;
+ box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.tick.icon.icon-ios.ion-ios-checkmark-circle{bottom: 131px;}
+
+.label{
+    margin-left: 0;
+    margin-right: 8px;
+    margin-top: 0px;
+    margin-bottom: 13px;
+}
+}

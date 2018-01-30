@@ -1,0 +1,69 @@
+page-map {
+
+.head .toolbar-background-md {
+    background: transparent;
+    border-color: transparent;
+}
+
+.head .toolbar-background-ios {
+    background: transparent;
+    border-color: transparent;
+}
+
+.head .toolbar-title-md {
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.head .toolbar-title.toolbar-title-ios {
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+.back-button-icon.icon.icon-md.back-button-icon-md.ion-md-arrow-back {
+    color: #fff;
+}
+
+.back-button-icon.icon.icon-ios.back-button-icon-ios.ion-ios-arrow-back{color:#fff;}
+
+.back-button-text.back-button-text-ios{color:#fff;}
+
+.footer .toolbar-title-md, .toolbar-title-ios {
+    color: #fff;
+    font-size: 13px;
+    font-weight: normal;
+    text-align: center;
+    cursor:pointer;
+}
+
+.toolbar-background-md, .toolbar-background-ios {
+    background: #fe42d4;
+    border-color: #fe42d4;
+}
+
+.km {
+    background: #fff;
+    float: left;
+    width: 100%;
+}
+
+
+.text-input-md,.text-input-ios {
+    text-align: center;
+}
+ion-app._gmaps_cdv_ .nav-decor{
+  background-color: transparent !important;
+}
+ 
+home-page {
+ 
+    #map {
+        height: 100%;
+    }
+ 
+}
+}
+

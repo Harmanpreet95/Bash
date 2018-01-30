@@ -1,0 +1,64 @@
+page-chatlist {
+
+.head .toolbar-background-md {
+    background: transparent;
+    border-color: transparent;
+}
+
+.head .toolbar-background-ios {
+    background: transparent;
+    border-color: transparent;
+}
+
+.head .toolbar-title-md {
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.head .toolbar-title.toolbar-title-ios {
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+.back-button-icon.icon.icon-md.back-button-icon-md.ion-md-arrow-back {
+    color: #fff;
+}
+
+.back-button-icon.icon.icon-ios.back-button-icon-ios.ion-ios-arrow-back{color:#fff;}
+
+.back-button-text.back-button-text-ios{color:#fff;}
+
+
+.pnk {
+    background: #ffe6f9 !important;
+    float: right;
+    text-align: left;
+    width: 70% !important;
+}
+
+.item-md p,.item-ios p {
+    background: #f0f3f8;
+    border-radius: 4px;
+    color: #000;
+    padding: 13px;
+    white-space: normal;
+    width: 100%;
+}
+
+
+.list-md .item-block .item-inner,.list-ios .item-block .item-inner {
+    border-bottom: 0px;
+}
+
+.icon {
+    color: #ff42d5;
+}
+
+.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+    border-bottom: 0px;
+}
+
+}

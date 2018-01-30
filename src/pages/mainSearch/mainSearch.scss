@@ -1,0 +1,438 @@
+page-mainSearch {
+.toolbar-background-md {
+    background: transparent;
+    border-color: transparent;
+}
+
+.toolbar-background-ios {
+    background: transparent;
+    border-color: transparent;
+}
+
+.toolbar-title-md {
+    color: #fff;
+    font-size: 15px;
+    font-weight: normal;
+    padding-top: 15px;
+    text-align: center;
+}
+
+.toolbar-title-ios {
+    color: #fff;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.back-button-icon.icon.icon-md.back-button-icon-md.ion-md-arrow-back {
+    color: #fff;
+}
+.swiper-slide img{
+    width:100%;
+}
+
+.back-button-icon.icon.icon-ios.back-button-icon-ios.ion-ios-arrow-back{color:#fff;}
+
+.back-button-text.back-button-text-ios{color:#fff;}
+
+ion-slides {
+    height: 35%;
+    padding: 0px;
+}
+.box11 {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin-bottom: 26px;    
+}
+
+.hexa, .hexa div {
+  margin: 0 auto;
+  transform-origin: 50% 50%;
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+   margin: 0 auto 10px;
+}
+.hexa {
+  width: auto;
+  height: 79px;
+}
+.hexa div {
+  width: 100%;
+  height: 100%;
+}
+.hexa {
+  transform: rotate(120deg);
+}
+.hex1 {
+  transform: rotate(-60deg);
+}
+.hex2 {
+  transform: rotate(-60deg);
+  position: relative;
+}
+
+.hex2 img{
+    height: 100%;
+}
+
+
+.hex2 > span {
+    background: rgba(255, 255, 255, 0.8) none repeat scroll 0 0;
+    bottom: 0;
+    height: 22px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 45px;
+}
+
+.amount {
+    border: 1px solid #fe42d4;
+    border-radius: 50px;
+    color: #fff;
+    padding: 3px 6%;
+    font-size: 14px;
+    word-wrap: normal;
+}
+
+
+.icon.icon-md.ion-md-add {
+    background: #fe42d4 none repeat scroll 0 0;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 20px;
+    padding: 6px 10px;
+}
+
+.icon.icon-ios.ion-ios-add {
+    background: #fe42d4;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 37px;
+    padding: 2px 10px;
+}
+
+ .plus {
+    border: 1px solid #464646;
+    border-radius: 50px;
+    left: 18px;
+    padding: 5px;
+    position: absolute;
+    bottom: -21px;
+    z-index: 99;
+}
+
+.searchbar-md .searchbar-input  {
+    background-color: transparent;
+    background-position: 8px center;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    box-shadow: none;
+    color: #141414;
+    font-size: 1.6rem;
+    font-weight: 400;
+    height: auto;
+    
+  
+}
+
+.searchbar{
+    margin-top: 2px;
+    float: left;
+    width:80%;
+    margin-left: 28px;
+
+}
+
+.searchbar-md .searchbar-search-icon {
+    left: 266px;
+    top: 11px;
+}
+
+.searchbar-ios {
+    background: transparent none repeat scroll 0 0;
+    border-bottom: 0px solid rgba(0, 0, 0, 0.05);
+    border-top: 0px solid transparent;
+    margin-top: 30px;
+    min-height: 30px;
+    padding: 0 8px;
+}
+
+
+.searchbar-ios.searchbar-left-aligned .searchbar-input {
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    padding-left: 0px;
+}
+
+
+
+.searchbar-ios .searchbar-search-icon {
+    right: 9px !important;
+    position: absolute;
+    left: unset;
+}
+.icn11{
+    font-size: 26px !important;
+}
+
+.icn {
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    float: left;
+    padding: 5px 8px;
+    width: auto;
+}
+
+.icns {
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    float: right;
+    padding: 7px 9px;
+    width: auto;
+}
+// .searchbar-input-container .searchbar-search-icon{
+//     top:8px !important;
+// }
+
+.icn .icon.icon-md.ion-md-contact, .icns .icon.icon-md.ion-md-funnel {
+    color: #fe42d4;
+    font-size: 32px;
+}
+
+// .icn .icon.icon-ios.ion-ios-contact, .icns .icon.icon-ios.ion-ios-funnel  {
+//     color: #fe42d4;
+//     font-size: 32px;
+// }
+
+
+.input.input-md, .input.input-ios {
+    border: 1px solid #ccc;
+    border-radius: 50px;
+}
+
+.text-input-ios {
+    margin: 11px 8px;
+}
+
+.brand {
+    background: #3b034c;
+    height: 20px !important;
+    left: -6px;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 60px;
+    color:#fff;
+        font-size: 11px;
+    padding-top: 3px;
+    margin:0 11px;
+}
+
+.amounts {
+    border: 1px solid #fe42d4;
+    border-radius: 50px;
+    color: #fe42d4;
+    display: block;
+    margin: 0 auto;
+    padding: 3px 0;
+    text-align: center;
+    width: 80%;
+}
+.searchbar-input-container{
+    position: relative;
+}
+.searchbar-md .searchbar-search-icon  {
+    left: unset !important;
+    position: absolute;
+    right:0 !important;
+    top: 11px;
+}
+.bdr11 .searchbar-search-icon  {
+    top:5px;
+}
+.bdr11  input{
+    border: none !important;
+    padding:0px 30px 0px 0 !important;
+}
+.bdr11 {
+    margin-top: 0;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    padding: 6px 8px;
+     padding-left: 8px;
+    padding-left: 30px;
+}
+.location{
+    position: absolute;
+    top: 12px;
+    z-index: 999;
+    color: #fe42d4;
+    left:10px;
+}
+.icn_box11{
+    position: relative;
+}
+
+.bdr11 .searchbar-md-cancel{
+    position: absolute;
+    right: 0px !important;
+    left: unset !important;
+    color: #686868 !important;
+    font-size: 13px;
+}
+.list11 {
+    border-radius: 7px;
+    box-shadow: 0 1px 7px -2px #000;
+    float: left;
+    left: 14px;
+    overflow: hidden;
+    position: absolute;
+    top: 62px;
+    width: 92%;
+    z-index: 9999;
+}
+.back-button.show-back-button {
+    display: none;
+}
+
+.swiper-container{
+    padding: 0 0 25px 0;
+}
+.pic_Seted {
+    max-width: 100%;
+    float: left;
+    position: relative;
+    overflow: hidden !important;
+}
+.pic_Seted img {
+    width: 88px;
+    height: 88px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    float: none;
+    margin: 0 auto;
+    display: table;
+}
+.amunt_sze {
+    font-size: 13px !important;
+        margin-top: 6px;
+}
+.searchbar-md .searchbar-clear-icon {
+    right:20px;
+}
+
+// .octagon {
+// 	width: 100px;
+// 	height: 100px;
+// 	background: url('http://rakesh.crystalbiltech.com/ads/uploads/post_photos/15053848511.jpg' ) top center;
+// 	position: relative;
+// }
+
+// .octagon:before {
+// 	content: "";
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	border-bottom: 29px solid red;
+// 	border-left: 29px solid #eee;
+// 	border-right: 29px solid #eee;
+// 	width: 42px;
+// 	height: 0;
+// }
+
+// .octagon:after {
+// 	content: "";
+// 	position: absolute;
+// 	bottom: 0;
+// 	left: 0;
+// 	border-top: 29px solid red;
+// 	border-left: 29px solid #eee;
+// 	border-right: 29px solid #eee;
+// 	width: 42px;
+// 	height: 0;
+// }
+
+
+.octagon {
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    position: relative;
+    overflow:hidden;
+     margin: auto;
+}
+.pic2 {
+    width: 90px;
+    height: 102px;
+}
+.pic2 img{
+    width:100%;
+    height:100%;
+}
+
+.octagon:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-bottom: 25px solid transparent;
+    border-left: 25px solid #fff;
+    border-right: 25px solid #fff;
+    width: 40px;
+    height: 0;
+}
+
+.octagon:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-top: 25px solid transparent;
+    border-left: 25px solid #fff;
+    border-right: 25px solid #fff;
+    width: 40px;
+    height: 0;
+}
+
+// .icn-srch {
+//     border: 1px solid #ccc;
+//     border-radius: 50px;
+//     float: right;
+//     padding: 7px 9px;
+//     width: auto;
+// }
+ion-icon.icon.icon-md.ion-md-search {
+    margin-top: 6px;
+}
+
+a.icn-srch {
+   font-size: 28px;
+   margin-left: 10px;
+    /* margin-top: 14px; */
+   color: #fe42d4;
+}
+
+// -----14/10/17------------
+.icon.icon-md.ion-md-arrow-back {
+    color: #fff;
+    font-size: 27px;
+    margin-left: 14px;
+
+}
+
+.searchbar-input {
+    width: 89%;
+}
+.searchbar .searchbar-input {
+    padding-left: 2px;
+    color:#fff;
+}
+
+
+.back-button .button-inner{
+    border:none;
+}
+}

@@ -1,0 +1,51 @@
+
+<ion-header class="head" style="background: url(assets/images/gradient.png) no-repeat center fixed; 
+  background-size: cover;">
+  <ion-toolbar>
+    <ion-title>
+      FULL VIEW 
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="md-close" showWhen="android,windows,ios" class="close"></ion-icon>
+      </button>
+
+      <!--<button ion-button>
+        <ion-icon name="refresh-circle" showWhen="android,windows,ios" class="refresh"></ion-icon>
+      </button>-->
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding style="background:#fff;">
+<img [src] =  "this.fullImg">
+  <!--<ion-list>
+    <ion-label class="label label-ios">
+      Filter By category
+    </ion-label>
+    <ion-item>
+    <ion-label>Cars</ion-label>
+    <ion-checkbox color="dark" checked="true"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Bikes</ion-label>
+    <ion-checkbox color="dark"></ion-checkbox>
+  </ion-item>
+</ion-list>
+
+<ion-list>
+    <ion-label class="label label-ios">
+      Filter By Posted Time
+    </ion-label>
+    <ion-item>
+    <ion-label>Most Newly Posted</ion-label>
+    <ion-checkbox color="dark" checked="true"></ion-checkbox>
+  </ion-item>
+  <ion-item>
+    <ion-label>Post less than 24 hours</ion-label>
+    <ion-checkbox color="dark"></ion-checkbox>
+  </ion-item>
+</ion-list>-->
+
+</ion-content>

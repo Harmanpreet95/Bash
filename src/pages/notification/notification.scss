@@ -1,0 +1,96 @@
+page-notification {
+.head .toolbar-background-md {
+    background: transparent;
+    border-color: transparent;
+}
+
+.head .toolbar-background-ios {
+    background: transparent;
+    border-color: transparent;
+}
+
+.head .toolbar-title-md {
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.head .toolbar-title.toolbar-title-ios {
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+.back-button-icon.icon.icon-md.back-button-icon-md.ion-md-arrow-back {
+    color: #fff;
+}
+
+.back-button-icon.icon.icon-ios.back-button-icon-ios.ion-ios-arrow-back{color:#fff;}
+
+.back-button-text.back-button-text-ios{color:#fff;}
+
+.noti h2{
+    float: left;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 2px 0 0 5px;
+    white-space: normal;
+    width: 55%;
+}
+
+.noti p  {
+    color: #a8a8a8;
+    float: left;
+    font-size: 1.4rem;
+    padding-left: 36px;
+    white-space: normal;
+    font-size: 12px;
+}
+
+.number{
+    background:#e838c1 ;
+    color:#fff;
+    border: 1px solid #e838c1 ;
+    border-radius:50px;
+    padding: 4px 9px;
+    width: auto;
+    float: left;
+}
+
+.post{
+    color: #ccc;
+    font-size: 13px;
+    position: absolute;
+    right: 9px;
+    top: 15px;
+}
+
+.item-md,.item-ios {
+    padding: 0px;
+}
+
+.label-md,.label-ios {
+    margin: 13px 0;
+}
+
+.list-ios > .item-block:first-child {
+    border-top: 0px;
+}
+
+
+.button-round-md,.button-round-ios{
+    border-color: #ccc;
+    color: #7f7f7f;
+    font-weight: normal;
+    height: 21px;
+    padding: 0 11px;
+}
+
+.button-round-md.activated,.button-round-ios.activated{
+    background: #311c5d !important;
+    color:#fff;
+
+}
+
+}

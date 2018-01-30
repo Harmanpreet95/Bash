@@ -1,0 +1,83 @@
+
+<ion-header class="head" style="background: url(assets/images/gradient.png) no-repeat center fixed; 
+  background-size: cover;">
+  <ion-navbar>
+    <ion-title>ADVERTISE EDIT</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content style="background-color:#fff;">
+
+  <div class="car">
+    <img src="assets/images/car.png" />
+  </div>
+
+
+<ion-list>
+  <ion-item>
+    <ion-icon style="margin-top: 17px;" name="logo-dropbox" item-start></ion-icon>
+    <ion-input type="text" placeholder="Elite I20 2015 Petrol Version For sale"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="document" item-start></ion-icon>
+    <textarea>
+   Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+
+  Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+  when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+   Lorem Ipsum has been the industry's standard..
+    </textarea>
+  </ion-item>
+</ion-list>
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-6> 
+      <ion-list class="drp_cnt">
+          <ion-item class="drp">
+            <ion-label>Category</ion-label>
+              <ion-select [(ngModel)]="gaming">
+                <ion-option value="ne" selected>SELECT CATEGORY</ion-option>
+                <ion-option value="nes">NES</ion-option>
+                <ion-option value="n64">Nintendo64</ion-option>
+              </ion-select>
+            </ion-item>
+
+          <ion-item>
+            <ion-label class="choose"><ion-icon name="logo-usd"></ion-icon><span>$5500</span></ion-label>
+            <ion-range [(ngModel)]="brightness"></ion-range> 
+          </ion-item>
+
+
+        </ion-list>
+    </ion-col>
+
+    <ion-col col-6>
+      <ion-card class="adv-map card card-ios">
+        <a class="locat"  (click)="mpPage();">
+          <img src="assets/images/advance-card-map-paris.png">
+          <ion-fab right="" top="">
+            <button color="secondary" ion-fab="" class="fab fab-ios fab-ios-secondary"><ion-icon class="fab-close-icon icon icon-ios ion-ios-close" name="close" role="img" aria-label="close"></ion-icon><span class="button-inner">
+              <ion-icon name="pin" role="img" class="icon icon-ios ion-ios-pin" aria-label="pin"></ion-icon>
+            </span><div class="button-effect"></div></button>
+          </ion-fab>
+        </a>
+      </ion-card>
+      <ion-item style="padding: 0px;">
+          <ion-icon style="margin-top: 17px;" name="navigate" item-start></ion-icon>
+          <ion-input type="text" placeholder="address" class="address"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title><a style="color:#fff;">SAVE EDITS</a></ion-title>
+  </ion-toolbar>
+</ion-footer>
+

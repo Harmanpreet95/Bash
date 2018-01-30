@@ -1,0 +1,73 @@
+
+<!-- 
+    <ion-buttons start left>
+    <button clear  ion-button (click)="nextPage()" >
+      <ion-icon name="ios-arrow-back-outline"></ion-icon>
+    </button>
+    </ion-buttons>
+    <ion-title>  Back </ion-title>-->
+
+
+<ion-header style="background:url(assets/images/gradient.png) no-repeat center fixed; 
+  background-size: cover;">
+  <ion-navbar>
+    <ion-title>Forgot Password</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="main_sec" padding style="background: url(assets/images/bg.png) no-repeat center fixed; 
+  background-size: cover;">
+
+<div class="pic">
+    <img src="assets/images/logob.png" />
+</div>
+ <form #heroForm="ngForm"novalidate>
+  <ion-list>
+<!--  
+  <ion-item>
+    <ion-label floating>Enter Your Registered Email ID</ion-label>
+	<ion-input  [(ngModel)]="data.email" name="email" type="email" id="email" required pattern='^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$' #email="ngModel"></ion-input>
+    <ion-label>
+		 <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
+		   <div [hidden]="!email.errors.required" class="alert alert-danger">
+			 Email Name is required
+			</div>
+			<div [hidden]="!email.errors.pattern" class="alert alert-danger">
+			 In-valid Email
+			</div>
+		 </div>
+    </ion-label>
+  </ion-item>-->
+
+ <ion-label style="width:100%;float:left;color:#fff;">Enter Registered Email ID</ion-label>
+    <ion-item class="login">
+      
+    <ion-icon name="mail" item-start class="icn"></ion-icon>
+    <ion-label class="alert alert-danger" color="danger">
+     <div *ngIf="email.errors && (email.dirty || email.touched)" >
+       <div [hidden]="!email.errors.required" >
+         Field is required
+        </div>
+        <div [hidden]="!email.errors.pattern" >
+         In-valid Email
+        </div>
+     </div>
+     </ion-label>
+    
+    <ion-input type="email" placeholder="Email" [(ngModel)]="data.email"  name="email" type="email"  id="email" required pattern='^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$'  #email="ngModel"></ion-input>
+    <ion-icon name="checkmark-circle-outline" item-end></ion-icon>
+  </ion-item>
+  
+  <!-- <ion-item style="border-bottom: 1px solid #e8e7ee;"> -->
+    <!-- <ion-label floating>Re-enter new password</ion-label> -->
+    <!-- <ion-input type="password"></ion-input> -->
+  <!-- </ion-item> -->
+
+</ion-list>
+<button class="submit11" ion-button color="light" round type="submit" (click)="forgotPwd(heroForm);" [disabled]="!heroForm.form.valid">Submit</button>
+</form>
+<!--<button ion-button block color="blu" (click)="forgotPwd(heroForm);" [disabled]="!heroForm.form.valid">Submit</button>-->
+<!--<a (click)="nextPage()"> Home </a>-->
+
+</ion-content>

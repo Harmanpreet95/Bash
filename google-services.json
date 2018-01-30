@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "412330479344",
+    "firebase_url": "https://bash-d04c2.firebaseio.com",
+    "project_id": "bash-d04c2",
+    "storage_bucket": "bash-d04c2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:412330479344:android:04b99fddcf17b998",
+        "android_client_info": {
+          "package_name": "com.ionicframework.shopping727443"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "412330479344-gt9r081l19er5nl92snpa9fs5nntij3p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwLO6B9ach3XKpFI_f5Y4dYMp7-AS5YeQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

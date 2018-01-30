@@ -1,0 +1,64 @@
+
+<ion-content padding style="background: url(assets/images/bg.png) no-repeat center fixed; 
+  background-size: cover;">
+
+  <div class="" style="float: left;padding: 0 15px;text-align: center;width: 100%;">
+   <div class="logo_edt" text-center><img src="assets/images/logob.png"></div>
+   <span class="wlcm">WELCOME BACK</span>
+<form #loginForm="ngForm" (ngSubmit)="login(loginForm)">
+<ion-list>
+
+  <ion-item class="login">
+    <ion-icon name="contact" item-start class="icn"></ion-icon>
+
+    <ion-input type="text" placeholder="User Name" [(ngModel)]="data.uname" name="uname" type="text"  id="uname" #uname="ngModel" required></ion-input>
+  </ion-item>
+  <ion-label  class="alert alert-danger" color="danger">
+    <div *ngIf="uname.errors && (uname.dirty || uname.touched)">
+        <div [hidden]="!uname.errors.required" >
+           Field is required
+        </div>
+    </div>
+  </ion-label>
+
+  <ion-item class="login">
+    <ion-icon name="key" item-start class="icn"></ion-icon>
+
+    <ion-input type="password" placeholder="Password" [(ngModel)]="data.password" name="password" type="password"  id="password" required   #password="ngModel"></ion-input>
+  </ion-item>
+  <ion-label class="alert alert-danger" color="danger">
+    <div *ngIf="password.errors && (password.dirty || password.touched)">
+      <div [hidden]="!password.errors.required" >
+        Password is required
+        </div>
+    </div>
+</ion-label>
+
+</ion-list>
+
+<button ion-button color="light" round type="submit"[disabled]="!loginForm.form.valid">LOG IN</button>
+</form>
+<button ion-button color="light" clear  text-capitalize class="log_btn" (click)="forget();">Forgot Username / Password</button>
+
+<!-- <span class="or">OR</span> -->
+
+<div class="fb"><img width="244px;" (click)="facebookLogin()" src="assets/images/fb.png" /></div>
+
+<span class="acc" (click)="supPage();">create an account</span>
+<!-- <button  class="btn-login" style="padding: 0 1.3rem;width: 62%;margin: 0 auto;float: none;display: block;" ion-button color="light" outline round (click)="supPage();">SIGN UP NOW <span class="free"> for free</span></button> -->
+
+<button class="skip" ion-button icon-right color="royal" (click)="skip();">
+        Skip
+      </button>
+  </div>
+</ion-content>
+  <!--<ion-footer>
+  <ion-toolbar>
+    <p></p>
+    <ion-buttons end>
+      <button ion-button icon-right color="royal" (click)="skip();">
+        Skip
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>-->

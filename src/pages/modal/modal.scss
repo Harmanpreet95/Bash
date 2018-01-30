@@ -1,0 +1,132 @@
+page-modal {
+
+    ion-toolbar.toolbar{
+    width:71%;
+    }   
+    
+    ion-toolbar.fltr{  
+    width:64%;
+}
+
+   ion-content{ 
+    width:64%;
+}
+
+.head .toolbar-background-md {
+    background: transparent;
+    border-color: transparent;
+}
+
+.head .toolbar-background-ios {
+    background: transparent;
+    border-color: transparent;
+}
+
+.head .toolbar-title-md {
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.head .toolbar-title.toolbar-title-ios {
+    color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.item-md, .item-ios{
+    padding-left: 0px;
+}
+
+.item.item-md .checkbox-md, .item.item-ios .checkbox-ios {
+     margin: 10px 0 9px;
+}
+
+.checkbox-md .checkbox-icon{
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+   
+.checkbox-ios .checkbox-icon{
+    position: absolute;
+    right: 0;
+    top: 15px;
+}
+
+.list-md .item-block .item-inner, .list-ios .item-block .item-inner{
+    border-bottom: 0px;
+}
+
+.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+    border-bottom: 0px;
+}
+
+.checkbox-md + .item-inner ion-label, .checkbox-ios + .item-inner ion-label{
+    color: #878787;
+    font-size: 15px;
+    font-weight: normal;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+.label-md, .label-ios{
+    font-size: 15px;
+    margin: 13px 8px 13px 0;
+}
+
+
+.checkbox-md-dark .checkbox-checked, .checkbox-ios-dark .checkbox-checked{
+    background-color: #250b53;
+    border-color: #250b53;
+}
+
+
+.close.ion-md-close {
+    color: #fff;
+    font-size: 24px;
+}
+
+.close.icon-ios.ion-md-close {
+    color: #fff;
+    font-size: 24px;
+     padding-left: 7px;
+}
+
+.refresh.ion-md-refresh-circle{
+    color: #fff;
+    font-size: 24px;
+    padding-right: 18px;
+}
+
+.refresh.icon-ios.ion-ios-refresh-circle {
+    color: #fff;
+    font-size: 24px;
+}
+.toolbar-background-md {
+    border-color: #fe42d4;
+    background: #fe42d4;
+}
+button.ftr_pnk {
+    color: #fff;
+    background: transparent;
+    text-align: center;
+    width: 100%;
+}
+.prce_lft {
+    width: 100%;
+    float: left;
+    padding-left: 4px;
+}
+.lsft_rnge {
+    padding: 0;
+    width: 100%;
+    float: left;
+}
+.fg_prc{
+    width:100%;
+    float:left;
+    
+}
+}

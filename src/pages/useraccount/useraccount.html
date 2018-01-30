@@ -1,0 +1,436 @@
+
+      <!--<ion-header class="head" style="background: url(assets/images/gradient.png) no-repeat center fixed; 
+        background-size: cover;">
+        <ion-toolbar>
+          <button start>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+          <ion-title>ACCOUNT</ion-title>
+          <a style="display:block;" (click)="notiPage();"><ion-icon name="notifications" item-end class="noti"></ion-icon></a>
+        </ion-toolbar>
+      </ion-header>-->
+
+      <ion-header class="head" style="background: url(assets/images/gradient.png) no-repeat center fixed; 
+        background-size: cover;">
+    <ion-navbar hideBackButton>
+        <ion-buttons left>
+            <button ion-button (click)="doYourStuff()">
+                <ion-icon style="color:#fff;" class="icon" name="md-arrow-back"></ion-icon>
+            </button>
+        </ion-buttons>
+        <ion-title>ACCOUNT</ion-title>
+        <ion-buttons right>
+          <!--<button ion-button style ="color:#fff;" (click) = "showlist()">
+             <ion-icon name="chatbubbles">Chat</ion-icon>
+          </button>-->
+            <!--<button ion-button (click)="notiPage();">
+                <ion-icon  style="color:#fff;" class="icon" name="notifications"></ion-icon>
+            </button>-->
+        </ion-buttons>
+    </ion-navbar>
+    </ion-header>
+
+
+      
+
+      <ion-content style="background-color:#fff;">
+
+          <div class="segmnt" style="background: url(assets/images/gradient.png) no-repeat center fixed; 
+        background-size: cover;">
+              <ion-list class="account">
+                <form #editform="ngForm" (ngSubmit)="onSubmit()" novalidate>
+                <ion-item class="main_item11">
+
+                  <ion-avatar *ngIf = "this.bit == 1 || fb_id != null" item-start class="user_pic">
+                    <img [src]="srcImage">
+                  </ion-avatar>
+                  <div class="camera_main">
+                  <ion-avatar  *ngIf = "this.bit == 2" item-start class="user_pic">
+                    <img [src]="srcImage" >
+                    <a href="#" class="camera11"><ion-icon (click) = "openActionSheet()" name="camera"></ion-icon></a>
+                  </ion-avatar>
+                  </div>
+
+      <div class="main_box11">
+                    <h2 *ngIf = "this.bit == 1">{{data.first_name}}</h2>
+                    <!--<h2 *ngIf = "this.bit == 2">{{data.username}}</h2>-->
+        <ion-item *ngIf = "this.bit == 2" class="edt_pic">
+        <!--<ion-icon class="icn11" name="Contact" item-start></ion-icon>-->
+        <ion-label  class="alert alert-danger" color="danger">
+            <div *ngIf="first_name.errors && (first_name.dirty || first_name.touched)">
+                <div [hidden]="!first_name.errors.pattern" style="font-size : 10px;">
+                  Only alphabets are allowed
+                  </div>
+            </div>
+          </ion-label>
+          <ion-input class="mgn" type="text" placeholder="Username" [(ngModel)]="data.first_name" pattern="[a-zA-Z ]+" name="first_name" type="text" #first_name="ngModel"></ion-input>
+        </ion-item>
+
+
+                      <h2 *ngIf = "this.bit == 1">{{data.last_name}}</h2>
+                    <!--<h2 *ngIf = "this.bit == 2">{{data.username}}</h2>-->
+        <ion-item *ngIf = "this.bit == 2" class="edt_pic">
+          <!--<ion-icon class="icn11" name="Contact" item-start></ion-icon>-->
+            <ion-label  class="alert alert-danger" color="danger">
+            <div *ngIf="last_name.errors && (last_name.dirty || last_name.touched)">
+                <div [hidden]="!last_name.errors.pattern" style="font-size : 10px;">
+                  Only alphabets are allowed
+                  </div>
+            </div>
+          </ion-label>
+          <ion-input class="mgn" type="text" placeholder="Username" [(ngModel)]="data.last_name" pattern="[a-zA-Z ]+" name="last_name" type="text" #last_name="ngModel"></ion-input>
+        </ion-item>
+
+                    <h2 *ngIf = "this.bit == 1">{{data.user_name}}</h2>
+                    <!--<h2 *ngIf = "this.bit == 2">{{data.username}}</h2>-->
+        <ion-item *ngIf = "this.bit == 2 && fb_id == null" class="edt_pic">
+
+      <ion-label  class="alert alert-danger" color="danger">
+          </ion-label>
+          <ion-input class="mgn" type="text" placeholder="Username" [(ngModel)]="data.user_name" name="user_name" type="text" #user_name="ngModel" readonly="true"></ion-input>
+        </ion-item>
+                    <p class="graph_dwn" *ngIf = "this.bit == 1"><ion-icon name="mail"></ion-icon><span class="gap_lft"> {{data.user_email}}</span></p>
+                    <!--<p *ngIf = "this.bit == 2"><ion-icon name="mail"></ion-icon> {{data.email}}</p>-->
+        <ion-item *ngIf = "this.bit == 2" class="edt_pic">
+          
+          <ion-label  class="alert alert-danger" color="danger">
+              <ion-icon class="icn11" name="mail" item-start></ion-icon>
+          </ion-label>
+          <ion-input type="text" placeholder="email" [(ngModel)]="data.user_email" name="user_email" type="email" #user_email ="ngModel" readonly="true"></ion-input>
+        </ion-item>
+                    <p class="graph_dwn" *ngIf = "this.bit == 1"><ion-icon name="call"></ion-icon><span class="gap_lft">{{data.phone}}</span></p>
+                    <!--<p *ngIf = "this.bit == 2"><ion-icon name="call"></ion-icon> +92 7059716869</p>-->
+        <ion-item *ngIf = "this.bit == 2" class="edt_pic">
+          <!--<ion-icon class="icn11" name="call" item-start></ion-icon>-->
+          <ion-label class="alert alert-danger" color="danger">
+            <div *ngIf="phone.errors && (phone.dirty || phone.touched)">
+          
+            <div [hidden]="!phone.errors.valid" class="alert alert-danger" style="font-size : 10px;" >
+                Invalid Format
+            </div>
+
+          </div>
+          <ion-icon class="icn11" name="call" item-start></ion-icon>
+        </ion-label>
+        
+          <ion-input type="number" placeholder="phone" [(ngModel)]="data.phone" name="phone"  #phone="ngModel"></ion-input>
+        </ion-item>
+                    <p class="graph_dwn" *ngIf = "this.bit == 1"><ion-icon name="pin"></ion-icon><span class="gap_lft"> {{data.country}}</span></p>
+                    <!--<p *ngIf = "this.bit == 2"><ion-icon name="pin"></ion-icon> {{data.country}}</p>-->
+        <ion-item *ngIf = "this.bit == 2" class="edt_pic last11">
+          <!--<ion-icon class="icn11" name="pin" item-start></ion-icon>-->
+              <ion-label  class="alert alert-danger" color="danger">
+            <div *ngIf="country.errors && (country.dirty || country.touched)">
+              
+                <div [hidden]="!country.errors.pattern" style="font-size:10px;">
+                  Only alphabets are allowed
+                  </div>
+            </div>
+            <ion-icon class="icn11" name="pin" item-start></ion-icon>
+          </ion-label>
+          <ion-input type="text" placeholder="country" [(ngModel)]="data.country"  pattern="[a-zA-Z ]+" name="country" type="text" #country="ngModel"></ion-input>
+        </ion-item>
+      </div>
+                </ion-item>
+      <button style="background: transparent;float: right;padding-right: 19px;"
+      *ngIf = "this.bit == 2" type="submit"  (click)="saveform(editform)"> <ion-icon name="checkmark" class="create"></ion-icon>
+
+      </button>
+
+        <!--<button style = "float: right; padding-right: 19px; color: Pink; background: green;" (click) = "logout()">Logout</button>-->
+      </form>
+              </ion-list>         
+
+                <ion-segment [(ngModel)]="pet">
+                  <ion-segment-button value="items" (click) = "myitemsacc()">
+                    <ion-icon name="cart" item-end style="font-size:15px;padding-right: 6px;"></ion-icon>MY ITEMS
+                  </ion-segment-button>
+                  <ion-segment-button value="favrouites" (click) = "favo()">
+                    <ion-icon name="star" item-end style="font-size:15px;padding-right: 6px;"></ion-icon>FAVORITES
+                  </ion-segment-button>
+                  <ion-segment-button value="settings" (click) = "setting()">
+                    <ion-icon name="settings" item-end style="font-size:15px;padding-right: 6px;"></ion-icon>SETTINGS
+                  </ion-segment-button>
+                </ion-segment>
+                <ion-list *ngIf = "this.itemsClose == 0">
+        <ion-item-sliding *ngFor = "let userItems of listItems">
+          <ion-item>
+                <div class="product" (click) = "singledetail(userItems.id)">
+                  <h2>{{userItems.title}}</h2>
+                </div> 
+                
+                <ion-avatar item-start>
+                  <img (click) = "singledetail(userItems.id)" [src]="userItems.image">
+                </ion-avatar>
+
+                  <div class="posted">
+                    <span>${{userItems.price}}</span>
+                    <h5>posted {{userItems.activation_date}}</h5>
+                  </div>
+
+                  <a (click)="offrPage(userItems.id);" class="icns"><ion-icon name="logo-usd" item-end class="usdicn"></ion-icon></a>
+                  <!--<a class="icns" (click) = "chat()"><ion-icon name="chatbubbles" item-end class="chaticn"></ion-icon></a>-->
+                  <a class="icns"><img src="assets/images/swipe.png" item-end /></a>
+                  <div *ngIf = "userItems.active == '1'" class="products" (click)="active(userItems.id)">
+                    <span>ACTIVE</span>
+                  </div>
+                  <div *ngIf = "userItems.active == '0'" class="productsa" (click)="active(userItems.id)">
+                      <span>INACTIVE</span>
+                    </div>
+            </ion-item>
+            <ion-item-options side="right">
+              <button ion-button color="secondary" (click) = "editpost(userItems.id)">
+                <ion-icon name="create"></ion-icon>
+              </button>
+              <button ion-button color="danger" (click) = "delpost(userItems.id)">
+                <ion-icon name="trash"></ion-icon>
+              </button>
+            </ion-item-options>
+        </ion-item-sliding>
+
+        </ion-list>
+
+          </div>
+
+
+      <div [ngSwitch]="pet">
+        <ion-list *ngSwitchCase="'items'" >
+        <ion-item-sliding *ngFor = "let userItems of listItems">
+          <ion-item>
+                <div class="product" (click) = "singledetail(userItems.id)">
+                  <h2>{{userItems.title}}</h2>
+                </div> 
+                
+                <ion-avatar item-start>
+                  <img (click) = "singledetail(userItems.id)" [src]="userItems.image">
+                </ion-avatar>
+
+                  <div class="posted">
+                    <span>${{userItems.price}}</span>
+                    <h5>posted {{userItems.activation_date}}</h5>
+                  </div>
+
+                  <a (click)="offrPage(userItems.id);" class="icns"><ion-icon name="logo-usd" item-end class="usdicn"></ion-icon></a>
+                  <!--<a class="icns" (click) = "chat()"><ion-icon name="chatbubbles" item-end class="chaticn"></ion-icon></a>-->
+                  <a class="icns"><img src="assets/images/swipe.png" item-end /></a>
+                  <div *ngIf = "userItems.active == '1'" class="products" (click)="active(userItems.id)">
+                      <span>ACTIVE</span>
+                    </div>
+                    <div *ngIf = "userItems.active == '0'" class="productsa" (click)="active(userItems.id)">
+                        <span>INACTIVE</span>
+                      </div>
+            </ion-item>
+            <ion-item-options side="right">
+              <button ion-button color="secondary" (click) = "editpost(userItems.id)">
+                <ion-icon name="create"></ion-icon>
+              </button>
+              <button ion-button color="danger" (click) = "delpost(userItems.id)">
+                <ion-icon name="trash"></ion-icon>
+              </button>
+            </ion-item-options>
+        </ion-item-sliding>
+
+        </ion-list>
+
+
+      <ion-list *ngSwitchCase="'favrouites'">
+        <ion-item-sliding  *ngFor = "let favoriteItems of favolist">
+            
+          <ion-item>
+                <div class="product" (click) = "singledetail(favoriteItems.post_id)">
+                  <h2>{{favoriteItems.title}}</h2>
+                </div> 
+
+            <ion-avatar item-start>
+              <img (click) = "singledetail(favoriteItems.post_id)" [src]="favoriteItems.image">
+            </ion-avatar>
+
+              <div class="posted">
+                <span>${{favoriteItems.price}}</span>
+                <h5>posted {{favoriteItems.activation_date}}</h5>
+              </div>
+
+                  <a (click)="offrPage(favoriteItems.post_id);" class="icns"><ion-icon name="logo-usd" item-end class="usdicn"></ion-icon></a>
+                  <!--<a class="icns" (click) = "chat()"><ion-icon name="chatbubbles" item-end class="chaticn"></ion-icon></a>-->
+                  <a class="icns"><img src="assets/images/swipe.png" item-end /></a>
+              <div class="date">
+                    <span>Added:{{cdate |  date:'MM-dd-yyyy'}}-{{favoriteItems.activation_date}}</span>
+                  </div>
+          </ion-item>
+            <ion-item-options side="right">
+              <button ion-button color="danger" (click) = "delfav(favoriteItems.post_id)">
+                <ion-icon name="trash"></ion-icon>
+              </button>
+            </ion-item-options>
+        </ion-item-sliding>
+
+      <!--<ion-item-sliding>
+              <div class="product">
+                  <h2>LENOVO</h2>
+                  <span>ACTIVE</span>
+                </div>
+          <ion-item>
+            <ion-avatar item-start>
+              <img src="assets/images/lapy.png">
+            </ion-avatar>
+              <div class="posted">
+                <span>$5500</span>
+                <h5>posted 2days ago</h5>
+              </div>
+            <a (click)="offrPage();" class="icns"><ion-icon name="logo-usd" item-end class="usdicn"></ion-icon></a>
+            <a class="icns"><ion-icon name="chatbubbles" item-end class="chaticn"></ion-icon></a>
+            <a class="icns"><img src="assets/images/swipe.png" item-end /></a>
+          </ion-item>
+            <ion-item-options side="right">
+              <button ion-button color="primary">
+                <ion-icon name="text"></ion-icon>
+                Edit
+              </button>
+              <button ion-button color="secondary">
+                <ion-icon name="call"></ion-icon>
+                Delete
+              </button>
+            </ion-item-options>
+        </ion-item-sliding>-->
+
+      </ion-list>
+
+      <ion-list padding *ngSwitchCase="'settings'">
+      <div (click)="editdata()">
+        <ion-item class="drpdwn">
+          <ion-icon name="create" item-start></ion-icon>
+            <span style="margin-left:6px;">Edit Profile</span>
+        </ion-item>
+      </div>
+
+      <div *ngIf = "fb_id == null">
+        <ion-item class="drpdwn" (click) = "userpass()">
+          <ion-icon name="contact" item-start></ion-icon>
+              <span style="margin-left:6px;">Username & Password</span>
+          <ion-icon name="arrow-dropdown" item-end></ion-icon>
+        </ion-item>
+
+      <ion-list class="edt" *ngIf = "bitclose == 2">
+      
+        <ion-item>
+          <ion-icon name="contact" item-start></ion-icon>
+          <ion-input type="text" placeholder="Username" [(ngModel)]="data.user_name" name="user_name" type="text" #user_name="ngModel" readonly = "true"></ion-input>
+        </ion-item>
+      <form #PassForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+        <ion-item>
+          <ion-icon name="key" item-start></ion-icon>
+
+          <ion-input type="password" placeholder="Old Password" [(ngModel)]="data.oldpass" name="oldpass" #oldpass="ngModel" required></ion-input>
+        </ion-item>
+        <ion-label class="alert alert-danger" color="danger">
+          <div *ngIf="oldpass.errors && (oldpass.dirty || oldpass.touched)">
+            <div [hidden]="!oldpass.errors.required" >
+           <h6> Old Password is required</h6>
+              </div>
+          </div>
+      </ion-label>
+
+        <ion-item>
+          <ion-icon name="key" item-start></ion-icon>
+
+          <ion-input type="password" placeholder="New Password" [(ngModel)]="data.newpass" name="newpass" minlength="6" #newpass="ngModel" required></ion-input>
+        </ion-item>
+        <ion-label class="alert alert-danger" color="danger">
+          <div *ngIf="newpass.errors && (newpass.dirty || newpass.touched)">
+            <div [hidden]="!newpass.errors.required" >
+              <h6> New Password is required</h6>
+              </div>
+          </div>
+          <div *ngIf="newpass.errors && (newpass.dirty || newpass.touched)" >
+              <div [hidden]="!newpass.errors.minlength" >
+                <h6> Password Minlength 6 Character</h6>
+              </div>
+          </div>
+      </ion-label>
+
+        <ion-item>
+          <ion-icon name="key" item-start></ion-icon>
+
+          <ion-input type="password" placeholder="Confirm Password" [(ngModel)]="data.cpass" name="cpass" #cpass="ngModel" required></ion-input>
+        </ion-item>
+                      <ion-label class="alert alert-danger" color="danger">
+              <div *ngIf="cpass.errors && (cpass.dirty || cpass.touched)">
+                <div [hidden]="!cpass.errors.required" >
+                  <h6> Confirm Password is required</h6>
+                  </div>
+              </div>
+          </ion-label>
+
+        <button type="submit" ion-button small round style="background:#fe42d4;float: right;" [disabled]="!PassForm.form.valid" (click)="UpdatePass(PassForm)">Update Password</button>
+      </form>
+      </ion-list>
+      </div>
+
+
+      <!-- <div (click) = "changelocation()" >
+        <ion-item class="drpdwn">
+          <ion-icon name="navigate" item-start></ion-icon>
+             <span style="margin-left:6px;"> Change Location</span>
+          <ion-icon name="arrow-dropdown" item-end></ion-icon>
+        </ion-item>
+      </div> -->
+      <ion-list class="edt" *ngIf = "bitclose == 1">
+    <!--  
+        <ion-item>
+          <ion-icon name="navigate" item-start></ion-icon>
+          <ion-input type="text" placeholder="Address" [(ngModel)]="address" ></ion-input>
+        </ion-item>-->
+
+        <ion-item class="tme_lbl">
+        
+       <ion-col class="nav-co" col-2><ion-icon name="navigate" item-start></ion-icon></ion-col>   
+      <ion-col col-10 no-padding width-auto>
+          
+              <ion-searchbar class="bdr11" no-padding
+                    [(ngModel)]="autocomplete.query" 
+                    [showCancelButton]="true" 
+                    (ionInput)="updateSearch()" 
+                    (ionCancel)="dismiss()"
+                    placeholder="Address ...">
+            </ion-searchbar>
+          </ion-col>
+          <ion-list class="list11">
+                <ion-item *ngFor="let item of autocompleteItems" 
+                (click)="chooseItem(item.description)">
+                {{ item.description }}
+                </ion-item>
+          </ion-list>
+    </ion-item>
+
+          
+
+        <button type="submit" ion-button small round style="background:#fe42d4;float: right; margin-bottom:40px;"  (click)="changeaddress(autocomplete.query)">Update Location</button>
+      </ion-list>
+
+<!-- 
+      <div>
+        <ion-item class="drpdwn">
+          <ion-icon name="call" item-start></ion-icon>
+            <span style="margin-left:6px;">Help Center</span>
+          <ion-icon name="arrow-dropdown" item-end></ion-icon>
+        </ion-item>
+      </div> -->
+
+
+      <div (click) = "logout()">
+        <ion-item class="drpdwn">
+          <ion-icon name="log-out" item-start ></ion-icon>
+            <span style="margin-left:6px;">Logout</span>
+        </ion-item>
+      </div>
+
+        </ion-list>
+      <!--/////////////////////////////////////FB ID NOT NULL//////////////////////////////////////////-->
+
+
+
+
+      </div>
+
+      </ion-content>
+

@@ -1,0 +1,76 @@
+
+<ion-header class="head" style="background: url(assets/images/gradient.png) no-repeat center fixed; 
+  background-size: cover;">
+  <ion-toolbar>
+    <ion-title>
+      FILTER
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="md-close" showWhen="android,windows,ios" class="close"></ion-icon>
+      </button>
+
+      <button ion-button (click) = "refresh()">
+        <ion-icon name="refresh-circle" showWhen="android,windows,ios" class="refresh"></ion-icon>
+      </button>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding style="background:#fff;">
+
+  <ion-list>
+    <ion-label class="label label-ios">
+      Filter By category
+    </ion-label>
+    <ion-item *ngFor="let categories of list;">
+    <ion-label>{{categories.title}}</ion-label>
+    <ion-checkbox color="dark" (ionChange) = "selectCat(categories.id,$event)"></ion-checkbox>
+  </ion-item>
+  <!--<ion-item>
+    <ion-label>Bikes</ion-label>
+    <ion-checkbox color="dark"></ion-checkbox>
+  </ion-item>-->
+</ion-list>
+
+<ion-list radio-group>
+    <ion-label class="label label-ios">
+      Filter By Posted Time
+    </ion-label>
+    <ion-item>
+    <ion-label>Most Newly Posted</ion-label>
+    <ion-radio value = "newly_posted"  (click) = "newly('newly_posted')"></ion-radio>
+  </ion-item>
+  <ion-item >
+    <ion-label>Post less than 24 hours</ion-label>
+    <ion-radio value = "less_24" (click) = "less('less_24')"></ion-radio>
+  </ion-item>
+    <ion-item >
+    <ion-label>Posts of one Week</ion-label>
+    <ion-radio  value = "week_1" (click) = "week('week_1')"></ion-radio>
+  </ion-item>
+    <ion-item>
+    <ion-label>Posts of one Month</ion-label>
+    <ion-radio value = "month_1"  (click) = "month('month_1')"></ion-radio>
+  </ion-item>
+  <ion-item>
+      <ion-label class="prce_lft">Price Range</ion-label>
+    <ion-range min="0" max="2500" [(ngModel)]="brightness" (ngModelChange)="pricefilter($event)" class="lsft_rnge">
+      <!-- <ion-icon range-left small name="sunny"></ion-icon>--><span range-left small>0</span> 
+     <!-- <ion-icon range-right name="sunny"></ion-icon>>--><span range-right small>2500</span> 
+    </ion-range>
+  </ion-item>
+    
+      <ion-item class="fg_prc">
+        <ion-input *ngIf="this.brightness != ''" type="text" placeholder="Price" [(ngModel)]="this.brightness"></ion-input>
+      </ion-item>
+    
+</ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="fltr">
+<button class="ftr_pnk" (click) = "filter()">FILTER</button>
+  </ion-toolbar>
+</ion-footer>

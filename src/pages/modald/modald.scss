@@ -1,0 +1,128 @@
+page-modald{
+
+.mod{
+    background:transparent;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    float: left;
+    margin: 56% 10%;
+    width: 80%;
+}
+
+.prz {
+    background: transparent;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 4px;
+    padding: 7px;
+}
+
+
+.range-md .range-knob-min.range-knob-min .range-knob, .range-ios .range-knob {
+    border: 2px solid #fe42d4;
+    background: #fe42d4;
+}
+
+.range-md .range-bar-active, .range-ios .range-bar-active {
+    background: #fe42d4;
+}
+
+
+.range-md .range-knob {
+    background: #fe42d4;
+}
+
+.pop {
+    background: #f2f2f2 ;
+    float: left;
+    padding: 20px 10px;
+    width: 100%;
+}
+.pop h3 {
+    color: #444;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+
+.cross {
+    background: #fff;
+    border-radius: 50px;
+    color: #000;
+    padding: 0 13px;
+    position: absolute;
+    right: -34px;
+    top: -37px;
+}
+
+.price {
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+.price > span {
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    color: #fe42d4;
+    padding: 8px 18px;
+}
+
+
+.list-md .item-block .item-inner {
+    border-bottom: 0px;
+}
+
+ion-range {
+    height: 32px;
+}
+
+.tick {
+    color: #fe42d4;
+    font-size: 41px;
+}
+
+.list-ios .item-block .item-inner {
+    border-bottom: 0px;
+}
+
+.cross.disable-hover.button.button-ios.button-default.button-default-ios{
+padding: 0 17px;
+ box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.tick.icon.icon-ios.ion-ios-checkmark-circle{bottom: 131px;}
+
+.label-md,.label-ios {
+   white-space: normal;
+}
+
+.chs{
+    font-size: 13px;
+    font-weight: normal;
+    position: relative;
+}
+
+.chs::before {
+    background: #fe42d4;
+    content: "";
+    float: left;
+    height: 1px;
+    left: 0;
+    position: absolute;
+    top: 8px;
+    width: 40px;
+}
+
+.chs::after {
+    background: #fe42d4;
+    content: "";
+    float: left;
+    height: 1px;
+    right: 0;
+    position: absolute;
+    top: 8px;
+    width: 40px;
+}
+
+}
